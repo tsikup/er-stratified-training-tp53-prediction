@@ -1,1 +1,1 @@
-# er-stratified-training-tp53-prediction
+This repositoy will be populated with the code related to the paper "Enhancing Model Generalizability and Bias Reduction through Stratified Training: A Case Study on TP53 Mutation Status Prediction with Estrogen Receptor Stratification in Breast Cancer" submitted for review at IEEE - Conference.

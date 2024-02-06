@@ -1,0 +1,71 @@
+---
+preprocess:
+  batch_size: 32
+  num_workers: 4
+  normalize: True
+  imagenet_norm: False
+  stride_overlap_percentage: 0.0
+  intersection_percentage: 1.0
+  tile_size: 384
+  annotation_type: tissue
+  segmentation_labels: null
+  save_masks: True
+  save_tiles: True
+  slide_extension: '.ndpi'
+  ann_extension: '.geojson'
+  ssl_ckpt_dir: "/path/to/feature/extraction/models/"
+  embeddings_sizes:
+    vit: 384
+    resnet50: 2048
+  additional_pretrained_models:
+    densenet121_imagenet: 1024
+  spacing:
+    target: 0.5
+    context: 2.0
+    x10: 1.0
+  ratio: 1.0
+  include_mask: False
+  filters2apply:
+    pad: True
+    constant_pad_value: 230
+    tileSize: 384
+    blurriness_threshold:
+      target: 500
+      context: null
+      x10: null
+    keep_tile_percentage:
+      target: 0.5
+      context: null
+      x10: null
+    normalize_bluriness: True
+    apply_mask: False
+    mask_background:
+    - 230
+    - 230
+    - 230
+    green: False
+    grays: False
+    redPen: False
+    greenPen: False
+    bluePen: False
+    remove_microtome_artifacts: False
+    remove_small_objects: False
+    stain_norm: True
+    stain_norm_mask: False
+    stain_norm_luminosity: True
+    stain_norm_method: vahadane
+    stain_norm_target: null
+    stain_norm_reference:
+      slide_level: "stain_vectors_slide_level_reference.csv"
+      dataset_level: "stain_vectors_dataset_level_reference.csv"
+    standardization_reference_dir: null
+    standardization_reference_file: null
+comet:
+  enable: False
+  api_key: API_KEY
+  project: PROJECT_NAME
+  workspace: WORKSPACE
+  experiment_key:
+telegram:
+  token: null
+  chat_id: null
